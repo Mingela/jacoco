@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.844" tests="124" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.8.0_91\jre\bin"/>
+    <property name="java.vm.version" value="25.91-b15"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Java_projects\AST\jacoco\commons-math3-3.6.1-src"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Java_projects\AST\jacoco\commons-math3-3.6.1-src"/>
+    <property name="java.runtime.version" value="1.8.0_91-b15"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="D:\Program Files\Java\jdk1.8.0_91\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\111\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="D:\Program Files\Maven\apache-maven-3.3.9\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="D:\Program Files\Java\jdk1.8.0_91\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Skype\Phone\;D:\Program Files\Git\cmd;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;D:\Program Files\Java\jdk1.8.0_91\bin;D:\Program Files\Maven\apache-maven-3.3.9\bin;D:\Program Files\Vagrant\bin;D:\Program Files\PuTTY\;C:\Users\111\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\111"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="user.name" value="Krabik"/>
+    <property name="java.class.path" value="D:\Program Files\Maven\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="D:\Program Files\Java\jdk1.8.0_91\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="ru"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_91"/>
+    <property name="java.ext.dirs" value="D:\Program Files\Java\jdk1.8.0_91\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;D:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;D:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;D:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;D:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.8.0_91\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp866"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\Program Files\Maven\apache-maven-3.3.9"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp866"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testCeilFloorRintLong" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testPrimitiveAdd" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testTanAtan" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.013"/>
+  <testcase name="testSqrtDefinition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.079"/>
+  <testcase name="testHypotDefinition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.015"/>
+  <testcase name="testLog1pDefinition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.008"/>
+  <testcase name="testLinearCombination1DSDS" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.003"/>
+  <testcase name="testLinearCombination2DSDS" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.067"/>
+  <testcase name="testExpm1Definition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.01"/>
+  <testcase name="testCoshDefinition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.015"/>
+  <testcase name="testSerialization" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.042"/>
+  <testcase name="testAtan2SpecialCases" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testAbs" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testAdd" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testExp" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.003"/>
+  <testcase name="testLog" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.008"/>
+  <testcase name="testPow" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.003"/>
+  <testcase name="testWrongVariableIndex" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.005"/>
+  <testcase name="testSubtract" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testAtan2" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.011"/>
+  <testcase name="testField" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testTrigo" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.032"/>
+  <testcase name="testOneParameterConstructor" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testReciprocal" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.002"/>
+  <testcase name="testLinearCombination2DoubleDS" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.059"/>
+  <testcase name="testCreateConstant" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testSinhAsinh" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.007"/>
+  <testcase name="testPrimitiveRemainder" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.078"/>
+  <testcase name="testLog1pExpm1" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.005"/>
+  <testcase name="testToRadiansDefinition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.009"/>
+  <testcase name="testVariable" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testPrimitiveMultiply" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testHypotSpecial" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testCompositionOneVariableX" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.002"/>
+  <testcase name="testCompositionOneVariableY" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testSqrtPow2" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.004"/>
+  <testcase name="testCoshAcosh" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.009"/>
+  <testcase name="testSinhDefinition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.006"/>
+  <testcase name="testConstant" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testCopySign" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testMissingOrders" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testTangentDefinition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.006"/>
+  <testcase name="testCompose" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.015"/>
+  <testcase name="testCosAcos" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.005"/>
+  <testcase name="testTanhAtanh" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.007"/>
+  <testcase name="testPowDoubleDS" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testComposeMismatchedDimensions" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testLinearCombination1DoubleDS" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testHypotNoOverflow" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testTaylorPolynomial" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.081"/>
+  <testcase name="testPrimitiveSubtract" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testDegRad" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.003"/>
+  <testcase name="testMultiply" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testTooLargeOrder" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testPowReciprocalPow" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.086"/>
+  <testcase name="testLogExp" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.003"/>
+  <testcase name="testRemainder" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.005"/>
+  <testcase name="testNegate" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testHypotNeglectible" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testCbrtPow3" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.006"/>
+  <testcase name="testLog10Definition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.005"/>
+  <testcase name="testSinAsin" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.008"/>
+  <testcase name="testSignum" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testSinCos" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.013"/>
+  <testcase name="testRootNSingularity" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.006"/>
+  <testcase name="testExpression" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.027"/>
+  <testcase name="testVariableWithoutDerivative0" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testVariableWithoutDerivative1" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testToDegreesDefinition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.003"/>
+  <testcase name="testLog10Power" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.005"/>
+  <testcase name="testTanhDefinition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.008"/>
+  <testcase name="testOneOrderConstructor" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testCbrtDefinition" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.006"/>
+  <testcase name="testTaylorAtan2" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.027"/>
+  <testcase name="testDivideField" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testRemainderDouble" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testGetField" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testDivideDouble" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testCos" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testSin" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testTan" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testAcosh" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testAsinh" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testAtanh" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testExpm1" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testFloor" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testHypot" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.002"/>
+  <testcase name="testLog1p" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testRootN" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testRound" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testScalb" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.003"/>
+  <testcase name="testAcos" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testAsin" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testAtan" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testCbrt" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testCeil" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testCosh" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testHash" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testRint" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testSinh" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testSqrt" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testTanh" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testAddField" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testMultiplyDouble" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testMultiplyInt" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testLinearCombinationDaFa" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testLinearCombinationFaFa" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testAddDouble" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testPowDouble" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testSubtractDouble" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testRemainderField" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testCopySignDouble" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testLinearCombinationDF2" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testLinearCombinationDF3" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testLinearCombinationDF4" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testLinearCombinationFF2" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testLinearCombinationFF3" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testLinearCombinationFF4" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testEquals" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testCopySignField" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testPowField" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testPowInt" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+  <testcase name="testMultiplyField" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0.001"/>
+  <testcase name="testSubtractField" classname="org.apache.commons.math3.analysis.differentiation.DerivativeStructureTest" time="0"/>
+</testsuite>
