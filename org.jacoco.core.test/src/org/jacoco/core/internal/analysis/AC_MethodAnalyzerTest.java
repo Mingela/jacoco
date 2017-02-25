@@ -308,11 +308,38 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 	}
 
 	// === Scenario: loops ===
-	// TODO: construct at least one program that has a loop and test it
-	// similarly to the other scenarios.
 
 	private void createLoop() {
-		// TODO: implement
+		Label l0 = new Label();
+		method.visitLabel(l0);
+		method.visitLineNumber(1001, l0);
+		method.visitInsn(Opcodes.ICONST_0);
+		method.visitVarInsn(Opcodes.ISTORE, 0);
+		Label l1 = new Label();
+		method.visitLabel(l1);
+		method.visitLineNumber(1002, l1);
+		method.visitIntInsn(Opcodes.BIPUSH, 5);
+		Label l2 = new Label();
+		method.visitJumpInsn(Opcodes.IF_ICMPGE, l2);
+		method.visitIincInsn(1, 1);
+		method.visitJumpInsn(Opcodes.GOTO, l1);
+		method.visitLabel(l2);
+		method.visitLineNumber(1003, l2);
+		method.visitInsn(Opcodes.RETURN);
+	}
+
+	@Test
+	public void testIfSimpleLoopNotCovered() {
+		createLoop();
+		runMethodAnalzer();
+		assertEquals(3, nextProbeId);
+
+		assertLine(1001, 2, 0, 2, 0);
+		assertLine(1002, 1, 0, 0, 0);
+		assertLine(1003, 1, 0, 0, 0);
+
+		// TODO: make it pass.
+		assertAcyclicPathCoverage(2, 0);
 	}
 
 	private void runMethodAnalzer() {
