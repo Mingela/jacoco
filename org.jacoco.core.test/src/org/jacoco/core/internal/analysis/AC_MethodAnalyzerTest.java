@@ -225,7 +225,7 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1003, 1, 0, 0, 0);
 
 		// TODO: make it pass.
-		//assertAcyclicPathCoverage(2, 0);
+		// assertAcyclicPathCoverage(2, 0);
 	}
 
 	@Test
@@ -342,8 +342,6 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 
 	}
 
-
-
 	@Test
 	public void testIfSimpleLoopNotCovered() {
 		createLoop();
@@ -354,9 +352,7 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 4, 0, 2, 0);
 		assertLine(1003, 1, 0, 0, 0);
 
-<<<<<<< HEAD
 		assertAcyclicPathCoverage(2, 0);
-=======
 		// TODO: make it pass.
 		assertAcyclicPathCoverage(0, 0);
 	}
@@ -375,7 +371,6 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 
 		// TODO: make it pass.
 		assertAcyclicPathCoverage(0, 0);
->>>>>>> 109295420d8657e912f7bd44c7fc39e7edaf5c92
 	}
 
 	private void runMethodAnalzer() {
