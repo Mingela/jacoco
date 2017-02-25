@@ -149,6 +149,7 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 2, 0, 0, 0);
 		assertLine(1003, 2, 0, 0, 0);
 
+		setAcyclicData(2, 0);
 		assertAcyclicPathCoverage(2, 0);
 	}
 
@@ -163,6 +164,7 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 0, 2, 0, 0);
 		assertLine(1003, 2, 0, 0, 0);
 
+		setAcyclicData(2, 1);
 		assertAcyclicPathCoverage(1, 1);
 	}
 
@@ -176,6 +178,7 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 2, 0, 0, 0);
 		assertLine(1003, 0, 2, 0, 0);
 
+		setAcyclicData(2, 1);
 		assertAcyclicPathCoverage(1, 1);
 	}
 
@@ -191,6 +194,7 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 0, 2, 0, 0);
 		assertLine(1003, 0, 2, 0, 0);
 
+		setAcyclicData(2, 2);
 		assertAcyclicPathCoverage(0, 2);
 	}
 
@@ -215,7 +219,7 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 	@Test
 	public void testIfBranchMergeNotCovered() {
 		createIfBranchMerge();
-		printMethod(method);
+		//printMethod(method);
 
 		runMethodAnalzer();
 		assertEquals(3, nextProbeId);
@@ -224,8 +228,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 1, 0, 0, 0);
 		assertLine(1003, 1, 0, 0, 0);
 
-		// TODO: make it pass.
-		// assertAcyclicPathCoverage(2, 0);
+		setAcyclicData(2, 0);
+		assertAcyclicPathCoverage(2, 0);
 	}
 
 	@Test
@@ -238,7 +242,7 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 1, 0, 0, 0);
 		assertLine(1003, 1, 0, 0, 0);
 
-		// TODO: make it pass.
+		setAcyclicData(2, 1);
 		assertAcyclicPathCoverage(1, 1);
 	}
 
@@ -252,7 +256,7 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 0, 1, 0, 0);
 		assertLine(1003, 1, 0, 0, 0);
 
-		// TODO: make it pass.
+		setAcyclicData(2, 1);
 		assertAcyclicPathCoverage(1, 1);
 	}
 
@@ -268,7 +272,7 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 0, 1, 0, 0);
 		assertLine(1003, 0, 1, 0, 0);
 
-		// TODO: make it pass.
+		setAcyclicData(2, 2);
 		assertAcyclicPathCoverage(0, 2);
 	}
 
@@ -301,8 +305,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 1, 0, 0, 0);
 		assertLine(1003, 1, 0, 0, 0);
 
-		// TODO: add assertAcyclicPathCoverage with proper parameters and
-		// make it pass.
+		setAcyclicData(2, 0);
+		assertAcyclicPathCoverage(2, 0);
 	}
 
 	@Test
@@ -315,8 +319,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 0, 1, 0, 0);
 		assertLine(1003, 0, 1, 0, 0);
 
-		// TODO: add assertAcyclicPathCoverage with proper parameters and
-		// make it pass.
+		setAcyclicData(2, 2);
+		assertAcyclicPathCoverage(0, 2);
 	}
 
 	// === Scenario: loops ===
@@ -352,9 +356,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 4, 0, 2, 0);
 		assertLine(1003, 1, 0, 0, 0);
 
+		setAcyclicData(2, 0);
 		assertAcyclicPathCoverage(2, 0);
-		// TODO: make it pass.
-		assertAcyclicPathCoverage(0, 0);
 	}
 
 	@Test
@@ -369,8 +372,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 0, 4, 0, 2);
 		assertLine(1003, 0, 1, 0, 0);
 
-		// TODO: make it pass.
-		assertAcyclicPathCoverage(0, 0);
+		setAcyclicData(2, 2);
+		assertAcyclicPathCoverage(0, 2);
 	}
 
 	private void runMethodAnalzer() {
