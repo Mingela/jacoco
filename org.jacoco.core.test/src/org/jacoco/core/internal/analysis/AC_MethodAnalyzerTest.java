@@ -212,8 +212,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 1, 0, 0, 0);
 		assertLine(1003, 1, 0, 0, 0);
 
-		// TODO: add assertAcyclicPathCoverage with proper parameters and
-		// make it pass.
+		// TODO: make it pass.
+		assertAcyclicPathCoverage(2, 0);
 	}
 
 	@Test
@@ -226,8 +226,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 1, 0, 0, 0);
 		assertLine(1003, 1, 0, 0, 0);
 
-		// TODO: add assertAcyclicPathCoverage with proper parameters and
-		// make it pass.
+		// TODO: make it pass.
+		assertAcyclicPathCoverage(1, 1);
 	}
 
 	@Test
@@ -240,8 +240,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 0, 1, 0, 0);
 		assertLine(1003, 1, 0, 0, 0);
 
-		// TODO: add assertAcyclicPathCoverage with proper parameters and
-		// make it pass.
+		// TODO: make it pass.
+		assertAcyclicPathCoverage(1, 1);
 	}
 
 	@Test
@@ -256,8 +256,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 0, 1, 0, 0);
 		assertLine(1003, 0, 1, 0, 0);
 
-		// TODO: add assertAcyclicPathCoverage with proper parameters and
-		// make it pass.
+		// TODO: make it pass.
+		assertAcyclicPathCoverage(0, 2);
 	}
 
 	// === Scenario: branch which jump backwards ===
