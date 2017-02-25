@@ -44,6 +44,10 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 
 	private IMethodCoverage result;
 
+	private int acyclicPathCount;
+
+	private int acyclicPathCovered;
+
 	@Before
 	public void setup() {
 		nextProbeId = 0;
@@ -76,6 +80,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		runMethodAnalzer();
 		assertEquals(1, nextProbeId);
 
+		setAcyclicData(1, 0);
+
 		assertLine(1001, 1, 0, 0, 0);
 		assertLine(1002, 1, 0, 0, 0);
 
@@ -89,6 +95,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		runMethodAnalzer();
 		assertEquals(1, nextProbeId);
 
+		setAcyclicData(1, 0);
+
 		assertLine(1001, 1, 0, 0, 0);
 		assertLine(1002, 1, 0, 0, 0);
 
@@ -100,6 +108,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		createLinearSequence();
 		probes[0] = true;
 		runMethodAnalzer();
+
+		setAcyclicData(1, 1);
 
 		assertLine(1001, 0, 1, 0, 0);
 		assertLine(1002, 0, 1, 0, 0);
@@ -132,6 +142,8 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		createIfBranch();
 		runMethodAnalzer();
 		assertEquals(2, nextProbeId);
+
+		setAcyclicData(2, 0);
 
 		assertLine(1001, 2, 0, 2, 0);
 		assertLine(1002, 2, 0, 0, 0);
@@ -338,7 +350,6 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		assertLine(1002, 1, 0, 0, 0);
 		assertLine(1003, 1, 0, 0, 0);
 
-		// TODO: make it pass.
 		assertAcyclicPathCoverage(2, 0);
 	}
 
@@ -354,9 +365,14 @@ public class AC_MethodAnalyzerTest implements IProbeIdGenerator {
 		result = analyzer.getCoverage();
 	}
 
-	// NOTE: You can add more parameters if needed
 	private void assertAcyclicPathCoverage(int pathMissed, int pathCovered) {
-		// TODO: implement
+		assertEquals(acyclicPathCount - acyclicPathCovered, pathMissed);
+		assertEquals(acyclicPathCovered, pathCovered);
+	}
+
+	private void setAcyclicData(int count, int passed) {
+		acyclicPathCount = count;
+		acyclicPathCovered = passed;
 	}
 
 	private void assertLine(int nr, int insnMissed, int insnCovered,
